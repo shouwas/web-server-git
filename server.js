@@ -2,6 +2,8 @@ const express = require('express');
 
 const hbs = require('hbs');
 
+const port = process.env.Port || 3000;
+
 var app = express();
 
 hbs.registerPartials(__dirname + '/views/partials');
@@ -38,6 +40,6 @@ app.get('/', function (req, res) {
     });
   })
 
-  app.listen(3000, ()=>{
-console.log('connection is stablishing');
+  app.listen(port, ()=>{
+console.log(`connection is stablishing ${port}`);
   });
