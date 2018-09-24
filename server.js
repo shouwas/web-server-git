@@ -31,6 +31,13 @@ app.get('/', function (req, res) {
     });
   });
 
+  app.get('/projects', function(req, res){
+
+    res.render('projects.hbs', {
+        title : 'Projects page ...',
+    });
+  });
+
 
   app.get('/bad', function(req, res){
 
