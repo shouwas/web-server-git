@@ -2,7 +2,7 @@ const express = require('express');
 
 const hbs = require('hbs');
 
-const port = process.env.Port || 3000;
+const port = process.env.PORT || 3000;
 
 var app = express();
 
@@ -40,6 +40,6 @@ app.get('/', function (req, res) {
     });
   })
 
-  app.listen(port, ()=>{
+  app.listen(port , ()=>{
 console.log(`connection is stablishing ${port}`);
   });
